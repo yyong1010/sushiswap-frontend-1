@@ -1,0 +1,42 @@
+// Theme Maps
+$themes: (
+  dark: (
+    "textColor": #f2e2ce,
+    "backgroundColor": #402318,
+  ),
+  light: (
+    "textColor": #402318,
+    "backgroundColor": #f2e2ce,
+  ),
+);
+
+@each $name, $map in $themes {
+  .theme-#{$name} {
+    @each $key, $value in $map {
+      --#{$key}: #{$value};
+    }
+  }
+}
+
+.app-root {
+  background-color: var(--backgroundColor);
+}
+
+/* Color Theme Swatches in Hex */
+$Onomura-2-hex: #a67f68;
+$Onomura-4-hex: #73412f;
+$Onomura-5-hex: #a6634b;
+
+/* Color Theme Swatches in RGBA */
+$Onomura-1-rgba: rgba(242, 225, 205, 1);
+$Onomura-2-rgba: rgba(165, 126, 104, 1);
+$Onomura-3-rgba: rgba(63, 34, 24, 1);
+$Onomura-4-rgba: rgba(114, 65, 47, 1);
+$Onomura-5-rgba: rgba(165, 98, 74, 1);
+
+/* Color Theme Swatches in HSLA */
+$Onomura-1-hsla: hsla(33, 58, 87, 1);
+$Onomura-2-hsla: hsla(22, 25, 52, 1);
+$Onomura-3-hsla: hsla(16, 44, 17, 1);
+$Onomura-4-hsla: hsla(16, 41, 31, 1);
+$Onomura-5-hsla: hsla(16, 37, 47, 1);
